@@ -5,6 +5,7 @@ const authRoute = require("./routes/auth")
 const dotenv = require('dotenv');
 const Projectroute = require("./routes/project");
 const mongoose = require("mongoose")
+const bugsRoutes = require('./routes/bugs');
 
 dotenv.config();
 
@@ -18,7 +19,8 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/auth", authRoute);
-app.use("/api/projects", Projectroute)
+app.use("/api/projects", Projectroute);
+app.use('/api/bugs', bugsRoutes);
 
 
 app.listen(PORT, ()=> {
