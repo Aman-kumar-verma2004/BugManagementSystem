@@ -53,6 +53,32 @@ router.post("/login", async (req, res) => {
     }catch(error){
         res.status(500).json({error : "Internal Server Error"});
     }
+});
+
+
+router.put("/update-role/:userId", auth, async (req, res) => {
+    try{
+        const {role} = req.body;
+        let user = await User.findById(req.params.userId);
+
+        if(!user){
+            return res.status(404).json({error : 'User Not Found'});
+        }
+
+        if(req.user.role !== "Admin"){
+            return res.status(403).json({msg :"Forbidden : Only Admin can update user Roles"});
+        }
+
+        user.role = role;
+        await user.save();
+
+    }catch(err){
+        console.error(err.message);
+        if (err.kind === 'ObjectId') {
+            return res.status(404).json({ msg: 'User not found' });
+        }
+        res.status(500).send("Server error");
+    }
 })
 
 module.exports = router;
