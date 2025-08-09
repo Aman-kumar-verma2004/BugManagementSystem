@@ -39,4 +39,4 @@ const bugSchema = new mongoose.Schema({
   }
 })
 
-module.exports = mongoose.model('Bug', BugSchema);
+module.exports = mongoose.model('Bug', bugSchema);
