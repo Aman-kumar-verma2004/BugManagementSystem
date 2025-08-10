@@ -55,7 +55,7 @@ router.post("/login", async (req, res) => {
     }
 });
 
-
+//Updating the role only by the Admin
 router.put("/update-role/:userId", auth, async (req, res) => {
     try{
         const {role} = req.body;
