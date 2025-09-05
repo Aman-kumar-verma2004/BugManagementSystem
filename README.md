@@ -1,6 +1,6 @@
 
 
-# Bug Tracking System (GitHub-Style)
+# Bug Tracking System 
 
 This is a full-stack bug tracking application built for team collaboration, inspired by the issue management system of **GitHub**. The main goal of this project is to provide a platform for teams to efficiently track, manage, and resolve bugs throughout the software development lifecycle.
 
@@ -130,7 +130,14 @@ The application should now be live on `http://localhost:5173`.
 
 ## 📸 Demo
 
-[Add a GIF or a series of screenshots showcasing the login, dashboard, project list, and bug detail pages.]
+<img width="1366" height="690" alt="image" src="https://github.com/user-attachments/assets/573c2447-504f-4321-a4e4-b229d26f788f" />
+<img width="1366" height="690" alt="image" src="https://github.com/user-attachments/assets/2b07baf9-3214-4191-a30e-1f28a8937224" />
+<img width="1366" height="687" alt="image" src="https://github.com/user-attachments/assets/bd9fe292-9a2e-43ae-923e-da599950646f" />
+
+.....
+
+
+
 
 -----
 
